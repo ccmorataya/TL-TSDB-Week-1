@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$env.ENV_VAR"
+      - run: echo "${{env.ENV_VAR}}"
+      - run: echo "$secrets.SECRET"
+      - run: echo "${{secrets.SECRET}}"
