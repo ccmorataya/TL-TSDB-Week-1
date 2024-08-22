@@ -7,6 +7,7 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    environment: testing
     steps:
       # - run: echo "$env.ENV_VAR"
       # - run: echo "${{env.ENV_VAR}}"
@@ -21,3 +22,4 @@ jobs:
           echo "${{ secrets.SECRET }}"
           echo "${{ env.ENV_VAR }}"
           echo "${{ env.ENV_VAR-testing }}"
+          echo "${{ env }}"
