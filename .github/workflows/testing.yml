@@ -17,5 +17,4 @@ jobs:
           SUPER_SECRET: ${{ secrets.SECRET }}
           VAR: ${{ env.ENV_VAR }}
         run: |
-          echo "$SUPER_SECRET"
           echo "$VAR"
