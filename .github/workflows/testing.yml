@@ -8,7 +8,14 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$env.ENV_VAR"
-      - run: echo "${{env.ENV_VAR}}"
-      - run: echo "$secrets.SECRET"
-      - run: echo "${{secrets.SECRET}}"
+      # - run: echo "$env.ENV_VAR"
+      # - run: echo "${{env.ENV_VAR}}"
+      # - run: echo "$secrets.SECRET"
+      # - run: echo "${{secrets.SECRET}}"
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.SECRET }}
+          VAR: ${{ env.ENV_VAR }}
+        run: |
+          echo "$SUPER_SECRET"
+          echo "$VAR"
