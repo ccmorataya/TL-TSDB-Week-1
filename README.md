@@ -1,6 +1,3 @@
 # TL-TSDB-Week-1
 
-```bash
-# TODO add github actions screenshot
-
-```
+![gh-actions output](image.png)
