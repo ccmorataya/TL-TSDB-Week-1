@@ -16,10 +16,11 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SECRET }}
-          VAR: ${{ env.ENV_VAR }}
+          VAR: ${{ env.a }}
         run: |
           echo "$VAR"
           echo "${{ secrets.SECRET }}"
-          echo "${{ env.ENV_VAR }}"
-          echo "${{ env.ENV_VAR-testing }}"
+          echo "${{ env.a }}"
+          echo "${{ env.a-testing }}"
           echo "${{ env }}"
+          echo "${{ vars.a }}"
