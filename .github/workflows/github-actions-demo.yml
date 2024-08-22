@@ -8,4 +8,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$MY_ENV_VARIABLE"
+      - run: echo "$env.ENV_VAR"
+      - run: echo "${{env.ENV_VAR}}"
+      - run: echo "$secrets.SECRET"
+      - run: echo "${{secrets.SECRET}}"
