@@ -18,3 +18,6 @@ jobs:
           VAR: ${{ env.ENV_VAR }}
         run: |
           echo "$VAR"
+          echo "${{ secrets.SECRET }}"
+          echo "${{ env.ENV_VAR }}"
+          echo "${{ env.ENV_VAR-testing }}"
